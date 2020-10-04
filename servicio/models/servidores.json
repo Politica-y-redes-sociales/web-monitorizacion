@@ -1,0 +1,30 @@
+[
+ {
+  "servidor": 170,
+  "status": "iniciaal",
+  "query": 1,
+  "totalQuery": 22,
+  "fecha": "ahaha"
+ },
+ {
+  "servidor": 186,
+  "status": "inicial",
+  "fecha": "nn",
+  "query": 0,
+  "totalQuery": 0
+ },
+ {
+  "servidor": 168,
+  "status": "inicial",
+  "fecha": "",
+  "query": 0,
+  "totalQuery": 0
+ },
+ {
+  "servidor": 45,
+  "status": "inicial",
+  "fecha": "",
+  "query": 0,
+  "totalQuery": 0
+ }
+]

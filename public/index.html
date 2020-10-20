@@ -121,38 +121,37 @@
 
 
         var mensaje = [];
-        var url='https://observatorioucen.herokuapp.com/api/servidores/status';
+        var url="localhost:4000/api/servidores/status";
         axios.get(url, {
-            responseType: 'json'
+            responseType: "json"
         }).then(function (res) {
             if (res.status == 200) {
                 for (let i = 0; i < res.data.length; i++) {
                     mensaje.push(res.data[i]);
                 }
                 var status186 = mensaje.filter(m => m.servidor == 186);
-                document.getElementById('status186').innerHTML = (status186[0].status);
-                document.getElementById('query186').innerHTML = (status186[0].query);
-                document.getElementById('totalQuery186').innerHTML = (status186[0].totalQuery);
-                document.getElementById('fecha186').innerHTML = (status186[0].fecha);
+                document.getElementById("status186").innerHTML = (status186[0].status);
+                document.getElementById("query186").innerHTML = (status186[0].query);
+                document.getElementById("totalQuery186").innerHTML = (status186[0].totalQuery);
+                document.getElementById("fecha186").innerHTML = (status186[0].fecha);
 
                 var status170 = mensaje.filter(m => m.servidor == 170);
-                document.getElementById('status170').innerHTML = (status170[0].status);
-                document.getElementById('query170').innerHTML = (status170[0].query)   
-                document.getElementById('totalQuery170').innerHTML = (status170[0].totalQuery);
-                document.getElementById('fecha170').innerHTML = (status186[0].fecha);
+                document.getElementById("status170").innerHTML = (status170[0].status);
+                document.getElementById("query170").innerHTML = (status170[0].query)   
+                document.getElementById("totalQuery170").innerHTML = (status170[0].totalQuery);
+                document.getElementById("fecha170").innerHTML = (status186[0].fecha);
 
                 var status168 = mensaje.filter(m => m.servidor == 168);
-                document.getElementById('status168').innerHTML = (status168[0].status);
-                document.getElementById('query168').innerHTML = (status168[0].query);
-                document.getElementById('totalQuery168').innerHTML = (status168[0].totalQuery);
-                document.getElementById('fecha168').innerHTML = (status186[0].fecha);
+                document.getElementById("status168").innerHTML = (status168[0].status);
+                document.getElementById("query168").innerHTML = (status168[0].query);
+                document.getElementById("totalQuery168").innerHTML = (status168[0].totalQuery);
+                document.getElementById("fecha168").innerHTML = (status186[0].fecha);
                 
                 var status45 = mensaje.filter(m => m.servidor == 45);
-                document.getElementById('status45').innerHTML = (status45[0].status);
-                document.getElementById('query45').innerHTML = (status45[0].query);
-                document.getElementById('totalQuery45').innerHTML = (status45[0].totalQuery);
-                document.getElementById('fecha45').innerHTML = (status186[0].fecha);
-
+                document.getElementById("status45").innerHTML = (status45[0].status);
+                document.getElementById("query45").innerHTML = (status45[0].query);
+                document.getElementById("totalQuery45").innerHTML = (status45[0].totalQuery);
+                document.getElementById("fecha45").innerHTML = (status186[0].fecha);
             }
         }
     );

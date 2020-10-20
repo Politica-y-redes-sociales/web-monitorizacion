@@ -23,8 +23,9 @@
             <th class="text-center" scope="col">Servidor</th>
             <th class="text-center" scope="col">Estado</th>
             <th class="text-center" scope="col">Query</th>
-            <th class="text-center" scope="col">De</th>
-            <th class="text-center" scope="col">Fecha inicio:</th>
+            <th class="text-center" scope="col">Total queries</th>
+            <th class="text-center" scope="col">Fecha inicio</th>
+            <th class="text-center" scope="col">Fecha temrino</th>
           </tr>
         </thead>
         <tbody>
@@ -37,34 +38,40 @@
             </td>
             <td class="text-center">
                 
-                <p id="Query45"></p>
+                <p id="query45"></p>
             </td>   
             <td class="text-center">
                 
                 <p id="totalQuery45"></p>
             </td>
             <td class="text-center">
-                <p id="fecha45"></p>
+                <p id="fechainicio45"></p>
+            </td>
+            <td class="text-center">
+                <p id="fechatermino45"></p>
             </td>
           </tr>
-          <tr style="">
+          <tr>
             
             <th class="text-center"  scope="row">
                 <p style="padding: 10px;">168</p></th>
            
             <td class="text-center">
-                <p id="Status168"></p>
+                <p id="status168"></p>
             </td>
             <td class="text-center">
                 
-                <p id="Query168"></p>
+                <p id="query168"></p>
             </td>   
             <td class="text-center" >
                 
                 <p id="totalQuery168"></p>
             </td>
             <td class="text-center">
-                <p id="fecha168"></p>
+                <p id="fechainicio168"></p>
+            </td>
+            <td class="text-center">
+                <p id="fechatermino168"></p>
             </td>
           </tr>
           <tr>
@@ -83,7 +90,10 @@
                 <p id="totalQuery170"></p>
             </td>
             <td class="text-center">
-                <p id="fecha170"></p>
+                <p id="fechainicio170"></p>
+            </td>
+            <td class="text-center">
+                <p id="fechatermino170"></p>
             </td>
           </tr>
           <tr>
@@ -91,7 +101,7 @@
                 <p style="padding: 10px;">186</p>
             </th>
             <td class="text-center">
-                <p id="status186"></p>
+                <p id='status186'></p>
             </td>
             <td class="text-center">
                 
@@ -102,15 +112,14 @@
                 <p id="totalQuery186"></p>
             </td>
             <td class="text-center">
-                <p id="fecha186"></p>
+                <p id="fechainicio186"></p>
+            </td>
+            <td class="text-center">
+                <p id="fechatermino186"></p>
             </td>
           </tr>
         </tbody>
       </table>
-  
-
-
-
 
     <div class="container" style="margin-top: 10px;  " >
         <input type="button" class="btn btn-primary" style="float: right;" value="Actualizar" onclick="javascript:window.location.reload();"/>
@@ -118,45 +127,50 @@
 </div>
     <script>
 
-
-
         var mensaje = [];
-        var url="https://observatorioucen.herokuapp.com/api/servidores/status";
+        var url='https://observatorioucen.herokuapp.com/api/servidores/status';
         axios.get(url, {
-            responseType: "json"
-        }).then(function (res) {
+            responseType: 'json'
+        }).then(function (res)  {
             if (res.status == 200) {
                 for (let i = 0; i < res.data.length; i++) {
                     mensaje.push(res.data[i]);
                 }
+
                 var status45 = mensaje.filter(m => m.servidor == 45);
                 document.getElementById("status45").innerHTML = (status45[0].status);
                 document.getElementById("query45").innerHTML = (status45[0].query);
                 document.getElementById("totalQuery45").innerHTML = (status45[0].totalQuery);
-                document.getElementById("fecha45").innerHTML = (status186[0].fecha);
+                document.getElementById("fechainicio45").innerHTML = (status45[0].fechainicio);
+                document.getElementById("fechatermino45").innerHTML = (status45[0].fechatermino);
 
                 var status168 = mensaje.filter(m => m.servidor == 168);
                 document.getElementById("status168").innerHTML = (status168[0].status);
                 document.getElementById("query168").innerHTML = (status168[0].query);
                 document.getElementById("totalQuery168").innerHTML = (status168[0].totalQuery);
-                document.getElementById("fecha168").innerHTML = (status186[0].fecha);
+                document.getElementById("fechainicio168").innerHTML = (status168[0].fechainicio);
+                document.getElementById("fechatermino168").innerHTML = (status45[0].fechatermino);
 
                 var status170 = mensaje.filter(m => m.servidor == 170);
                 document.getElementById("status170").innerHTML = (status170[0].status);
                 document.getElementById("query170").innerHTML = (status170[0].query)   
                 document.getElementById("totalQuery170").innerHTML = (status170[0].totalQuery);
-                document.getElementById("fecha170").innerHTML = (status186[0].fecha);
+                document.getElementById("fechainicio170").innerHTML = (status170[0].fechainicio);
+                document.getElementById("fechatermino170").innerHTML = (status170[0].fechatermino);
 
                 var status186 = mensaje.filter(m => m.servidor == 186);
                 document.getElementById("status186").innerHTML = (status186[0].status);
                 document.getElementById("query186").innerHTML = (status186[0].query);
                 document.getElementById("totalQuery186").innerHTML = (status186[0].totalQuery);
-                document.getElementById("fecha186").innerHTML = (status186[0].fecha);
-                
+                document.getElementById("fechainicio186").innerHTML = (status186[0].fechainicio );
+                document.getElementById("fechatermino186").innerHTML = (status1860[0].fechatermino);
+
             }
+        
         }
     );
     </script>
+
 </body>
 
 </html>

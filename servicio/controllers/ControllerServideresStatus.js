@@ -19,7 +19,6 @@ ServidoresStatus.ActualizarServidor=  async(req,res)=>{
             s.fecha=fecha;
             s.query=query;
             s.totalQuery=totalQuery;
-            s.fecha=fecha;
             cambio=true;
         }
     });

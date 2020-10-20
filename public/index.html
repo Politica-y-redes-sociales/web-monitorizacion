@@ -129,6 +129,12 @@
                 for (let i = 0; i < res.data.length; i++) {
                     mensaje.push(res.data[i]);
                 }
+                var status45 = mensaje.filter(m => m.servidor == 45);
+                document.getElementById("status45").innerHTML = (status45[0].status);
+                document.getElementById("query45").innerHTML = (status45[0].query);
+                document.getElementById("totalQuery45").innerHTML = (status45[0].totalQuery);
+                document.getElementById("fecha45").innerHTML = (status186[0].fecha);
+                
                 var status186 = mensaje.filter(m => m.servidor == 186);
                 document.getElementById("status186").innerHTML = (status186[0].status);
                 document.getElementById("query186").innerHTML = (status186[0].query);
@@ -147,11 +153,7 @@
                 document.getElementById("totalQuery168").innerHTML = (status168[0].totalQuery);
                 document.getElementById("fecha168").innerHTML = (status186[0].fecha);
                 
-                var status45 = mensaje.filter(m => m.servidor == 45);
-                document.getElementById("status45").innerHTML = (status45[0].status);
-                document.getElementById("query45").innerHTML = (status45[0].query);
-                document.getElementById("totalQuery45").innerHTML = (status45[0].totalQuery);
-                document.getElementById("fecha45").innerHTML = (status186[0].fecha);
+
             }
         }
     );

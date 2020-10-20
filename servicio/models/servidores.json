@@ -2,14 +2,14 @@
  {
   "servidor": 170,
   "status": "iniciaal",
-  "query": 1,
-  "totalQuery": 22,
-  "fecha": "ahaha"
+  "query": 0,
+  "totalQuery": 0,
+  "fecha": ""
  },
  {
   "servidor": 186,
   "status": "inicial",
-  "fecha": "nn",
+  "fecha": "",
   "query": 0,
   "totalQuery": 0
  },

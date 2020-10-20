@@ -121,7 +121,7 @@
 
 
         var mensaje = [];
-        var url="localhost:4000/api/servidores/status";
+        var url="https://observatorioucen.herokuapp.com/api/servidores/status";
         axios.get(url, {
             responseType: "json"
         }).then(function (res) {

@@ -9,16 +9,17 @@ ServidoresStatus.StatusServidores= async (req,res)=>{
 }
 
 ServidoresStatus.ActualizarServidor=  async(req,res)=>{
-    const {status,query,totalQuery,fecha} = req.body;
+    const {status,query,totalQuery,fechainicio,fechatermino} = req.body;
     const parametro=req.params;
     let cambio=false;
 
     servidores.forEach((s)=>{
         if(s.servidor===parseInt(parametro.servidor)){
-            s.status=(status);
-            s.fecha=fecha;
-            s.query=query;
-            s.totalQuery=totalQuery;
+            s.status=(status==null) ? s.status: status;
+            s.fechainicio = (fechainicio==null) ? s.fechainicio : fechainicio;
+            s.fechatermino = (fechatermino==null) ? s.fechatermino : fechatermino;
+            s.query = (query==null) ? s.query : query;
+            s.totalQuery = (totalQuery==null) ? s.totalQuery : totalQuery;
             cambio=true;
         }
     });

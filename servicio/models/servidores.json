@@ -2,20 +2,24 @@
  {
   "servidor": 170,
   "status": "iniciaal",
+  "fechainicio": "",
+  "fechatermino": "",
   "query": 0,
-  "totalQuery": 0,
-  "fecha": ""
+  "totalQuery": 0
+  
  },
  {
   "servidor": 186,
   "status": "inicial",
-  "fecha": "",
+  "fechainicio": "",
+  "fechatermino": "",
   "query": 0,
   "totalQuery": 0
  },
  {
   "servidor": 168,
   "status": "inicial",
+  "fechatermino": "",
   "fecha": "",
   "query": 0,
   "totalQuery": 0
@@ -23,7 +27,8 @@
  {
   "servidor": 45,
   "status": "inicial",
-  "fecha": "",
+  "fechainicio": "",
+  "fechatermino": "",
   "query": 0,
   "totalQuery": 0
  }

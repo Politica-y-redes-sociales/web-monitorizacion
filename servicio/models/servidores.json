@@ -1,11 +1,11 @@
 [
  {
   "servidor": 170,
-  "status": "iniciaal",
+  "status": "inicial",
   "fechainicio": "",
   "fechatermino": "",
-  "query": 0,
-  "totalQuery": 0
+  "query": "",
+  "totalQuery": ""
   
  },
  {
@@ -13,23 +13,23 @@
   "status": "inicial",
   "fechainicio": "",
   "fechatermino": "",
-  "query": 0,
-  "totalQuery": 0
+  "query": "",
+  "totalQuery": ""
  },
  {
   "servidor": 168,
   "status": "inicial",
   "fechatermino": "",
   "fechainicio": "",
-  "query": 0,
-  "totalQuery": 0
+  "query": "",
+  "totalQuery": ""
  },
  {
   "servidor": 45,
   "status": "inicial",
   "fechainicio": "",
   "fechatermino": "",
-  "query": 0,
-  "totalQuery": 0
+  "query": "",
+  "totalQuery": ""
  }
 ]

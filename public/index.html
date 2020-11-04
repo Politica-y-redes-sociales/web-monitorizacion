@@ -118,6 +118,28 @@
                 <p id="fechatermino186"></p>
             </td>
           </tr>
+          <tr>
+            <th class="text-center" scope="row">
+                <p style="padding: 10px;">186(nuevo)</p>
+            </th>
+            <td class="text-center">
+                <p id='status1862'></p>
+            </td>
+            <td class="text-center">
+                
+                <p id="query1862"></p>
+            </td>   
+            <td class="text-center">
+                
+                <p id="totalQuery1862"></p>
+            </td>
+            <td class="text-center">
+                <p id="fechainicio1862"></p>
+            </td>
+            <td class="text-center">
+                <p id="fechatermino1862"></p>
+            </td>
+          </tr>
         </tbody>
       </table>
 
@@ -164,6 +186,14 @@
                 document.getElementById("totalQuery186").innerHTML = (status186[0].totalQuery);
                 document.getElementById("fechainicio186").innerHTML = (status186[0].fechainicio );
                 document.getElementById("fechatermino186").innerHTML = (status186[0].fechatermino);
+                
+                var status1862 = mensaje.filter(m => m.servidor == 1862);
+                document.getElementById("status1862").innerHTML = (status1862[0].status);
+                document.getElementById("query1862").innerHTML = (status1862[0].query);
+                document.getElementById("totalQuery1862").innerHTML = (status1862[0].totalQuery);
+                document.getElementById("fechainicio1862").innerHTML = (status1862[0].fechainicio );
+                document.getElementById("fechatermino1862").innerHTML = (status1862[0].fechatermino);
+
 
             }
         

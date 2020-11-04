@@ -31,5 +31,13 @@
   "fechatermino": "",
   "query": "",
   "totalQuery": ""
+ },
+  {
+  "servidor": 1862,
+  "status": "inicial",
+  "fechainicio": "",
+  "fechatermino": "",
+  "query": "",
+  "totalQuery": ""
  }
 ]

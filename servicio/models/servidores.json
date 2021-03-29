@@ -5,8 +5,8 @@
   "fechainicio": "",
   "fechatermino": "",
   "query": "",
-  "totalQuery": ""
-  
+  "totalQuery": "",
+  "error": ""
  },
  {
   "servidor": 186,
@@ -14,7 +14,8 @@
   "fechainicio": "",
   "fechatermino": "",
   "query": "",
-  "totalQuery": ""
+  "totalQuery": "",
+  "error": ""
  },
  {
   "servidor": 168,
@@ -22,7 +23,8 @@
   "fechatermino": "",
   "fechainicio": "",
   "query": "",
-  "totalQuery": ""
+  "totalQuery": "",
+  "error": ""
  },
  {
   "servidor": 45,
@@ -30,14 +32,16 @@
   "fechainicio": "",
   "fechatermino": "",
   "query": "",
-  "totalQuery": ""
+  "totalQuery": "",
+  "error": ""
  },
-  {
+ {
   "servidor": 1862,
   "status": "inicial",
   "fechainicio": "",
   "fechatermino": "",
   "query": "",
-  "totalQuery": ""
+  "totalQuery": "",
+  "error": ""
  }
 ]

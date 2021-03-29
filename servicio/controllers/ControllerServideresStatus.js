@@ -9,7 +9,7 @@ ServidoresStatus.StatusServidores= async (req,res)=>{
 }
 
 ServidoresStatus.ActualizarServidor=  async(req,res)=>{
-    const {status,query,totalQuery,fechainicio,fechatermino} = req.body;
+    const {status,query,totalQuery,fechainicio,fechatermino,error} = req.body;
     const parametro=req.params;
     let cambio=false;
 
@@ -20,6 +20,7 @@ ServidoresStatus.ActualizarServidor=  async(req,res)=>{
             s.fechatermino = (fechatermino==null) ? s.fechatermino : fechatermino;
             s.query = (query==null) ? s.query : query;
             s.totalQuery = (totalQuery==null) ? s.totalQuery : totalQuery;
+            s.error = (error == null) ? s.error : error;
             cambio=true;
         }
     });
@@ -34,3 +35,4 @@ ServidoresStatus.ActualizarServidor=  async(req,res)=>{
 
 
 module.exports=ServidoresStatus;
+

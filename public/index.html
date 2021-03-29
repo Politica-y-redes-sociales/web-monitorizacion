@@ -28,6 +28,7 @@
             <th class="text-center" scope="col">Total queries</th>
             <th class="text-center" scope="col">Fecha inicio</th>
             <th class="text-center" scope="col">Fecha termino</th>
+            <th class="text-center" scope="col">error</th>
           </tr>
         </thead>
         <tbody>
@@ -52,6 +53,9 @@
             <td class="text-center">
                 <p id="fechatermino45"></p>
             </td>
+            <td class="text-center">
+                <p id="error45"></p>
+            </td>
           </tr>
           <tr>
             
@@ -75,6 +79,9 @@
             <td class="text-center">
                 <p id="fechatermino168"></p>
             </td>
+            <td class="text-center">
+                <p id="error168"></p>
+            </td>
           </tr>
           <tr>
             <th class="text-center" scope="row">
@@ -96,6 +103,9 @@
             </td>
             <td class="text-center">
                 <p id="fechatermino170"></p>
+            </td>
+            <td class="text-center">
+                <p id="error170"></p>
             </td>
           </tr>
           <tr>
@@ -119,6 +129,9 @@
             <td class="text-center">
                 <p id="fechatermino186"></p>
             </td>
+            <td class="text-center">
+                <p id="error186"></p>
+            </td>
           </tr>
           <tr>
             <th class="text-center" scope="row">
@@ -140,6 +153,9 @@
             </td>
             <td class="text-center">
                 <p id="fechatermino1862"></p>
+            </td>
+            <td class="text-center">
+                <p id="error1862"></p>
             </td>
           </tr>
         </tbody>
@@ -167,6 +183,7 @@
                 document.getElementById("totalQuery45").innerHTML = (status45[0].totalQuery);
                 document.getElementById("fechainicio45").innerHTML = (status45[0].fechainicio);
                 document.getElementById("fechatermino45").innerHTML = (status45[0].fechatermino);
+                document.getElementById("error45").innerHTML = (status45[0].error);
 
                 var status168 = mensaje.filter(m => m.servidor == 168);
                 document.getElementById("status168").innerHTML = (status168[0].status);
@@ -174,6 +191,7 @@
                 document.getElementById("totalQuery168").innerHTML = (status168[0].totalQuery);
                 document.getElementById("fechainicio168").innerHTML = (status168[0].fechainicio);
                 document.getElementById("fechatermino168").innerHTML = (status168[0].fechatermino);
+                document.getElementById("error168").innerHTML = (status168[0].error);
 
                 var status170 = mensaje.filter(m => m.servidor == 170);
                 document.getElementById("status170").innerHTML = (status170[0].status);
@@ -181,6 +199,7 @@
                 document.getElementById("totalQuery170").innerHTML = (status170[0].totalQuery);
                 document.getElementById("fechainicio170").innerHTML = (status170[0].fechainicio);
                 document.getElementById("fechatermino170").innerHTML = (status170[0].fechatermino);
+                document.getElementById("error170").innerHTML = (status170[0].error);
 
                 var status186 = mensaje.filter(m => m.servidor == 186);
                 document.getElementById("status186").innerHTML = (status186[0].status);
@@ -188,13 +207,15 @@
                 document.getElementById("totalQuery186").innerHTML = (status186[0].totalQuery);
                 document.getElementById("fechainicio186").innerHTML = (status186[0].fechainicio );
                 document.getElementById("fechatermino186").innerHTML = (status186[0].fechatermino);
-                
+                document.getElementById("error186").innerHTML = (status186[0].error);
+
                 var status1862 = mensaje.filter(m => m.servidor == 1862);
                 document.getElementById("status1862").innerHTML = (status1862[0].status);
                 document.getElementById("query1862").innerHTML = (status1862[0].query);
                 document.getElementById("totalQuery1862").innerHTML = (status1862[0].totalQuery);
                 document.getElementById("fechainicio1862").innerHTML = (status1862[0].fechainicio );
                 document.getElementById("fechatermino1862").innerHTML = (status1862[0].fechatermino);
+                document.getElementById("error1862").innerHTML = (status1862[0].error);
 
 
             }
@@ -204,5 +225,4 @@
     </script>
 
 </body>
-
 </html>
